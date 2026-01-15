@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
 p {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -22,24 +24,44 @@ h2 {
   margin-bottom: 30px;
 }
 
-.headshot {
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.image {
   width: 250px;
   height: 250px;
-  border-radius: 70%;
   object-fit: cover;
   object-position: center;
 }
 
-.profile {
+.image--circle {
+  border-radius: 70%;
+}
+
+.image--rounded {
+  width: 350px;
+  height: 450px;
+  border-radius: 15%;
+}
+
+.content {
     display: grid;
     grid-template-columns: auto 1fr;
-    place-items: left;
+    align-items: start;
     gap: 32px;
-    padding: 10px;
-    background-image: linear-gradient(to right, #e98695, #C09BD8);
+    padding: 30px;
+}
+
+.header-background{
+  background-image: linear-gradient(to right, #e98695, #C09BD8);
 }
 
 ul.navbar {
+    position: sticky;
+    top: 0;
     justify-content: center;
     display: flex;
     list-style-type: none;
