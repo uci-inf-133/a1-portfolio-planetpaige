@@ -1,3 +1,9 @@
+/* ===== Primary Styles ===== */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,6 +17,7 @@ p {
   font-size: 20px;
 }
 
+/* Shared style for intro text and h1 */
 .intro, h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
@@ -20,6 +27,7 @@ p {
   margin-bottom: 50px;
 }
 
+/* Shared style for sub intro text and h2 */
 .sub-intro, h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -28,6 +36,7 @@ p {
   margin-bottom: 30px;
 }
 
+/* Project section subtitle */
 .projects-title p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -35,6 +44,7 @@ p {
   font-style: italic;
 }
 
+/* Experience position paragraph style */
 .experience-position p {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -42,18 +52,21 @@ p {
   margin-bottom: 30px;
 }
 
+/* ===== Image Styles ===== */
 .image {
   width: 250px;
   height: 250px;
-  object-fit: cover;
+  object-fit: cover; /* Fill container */
   object-position: center;
   box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Fully circular image for headshot and logos */
 .image--circle {
   border-radius: 70%;
 }
 
+/* Rounded rectangle image for project screenshots */
 .image--rounded {
   max-width: 350px;
   height: 400px;
@@ -61,6 +74,7 @@ p {
   box-shadow : 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Set up for the basic layout with margins and padding for throughout the page */
 .content {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -69,21 +83,13 @@ p {
     padding: 30px;
 }
 
-.content-mid {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 32px;
-  padding: 30px;
+/* Same layout for the page with the gradient background to differentiate the sections */
+.background{
   background-image: linear-gradient(to right, #e98695, #C09BD8);
 }
-
-.header-background{
-  background-image: linear-gradient(to right, #e98695, #C09BD8);
-}
-
+/* ===== Navigation Bar ===== */
 ul.navbar {
-    position: sticky;
+    position: sticky; /* Sticks to top on scroll */
     top: 0;
     justify-content: center;
     display: flex;
@@ -117,28 +123,30 @@ ul.navbar li a:hover {
   grid-template-columns: 1fr;
 }
 
+/* Prevents horizontal scroll issues */
 #experience {
   overflow-x: hidden;
 }
 
+/* ===== Card Layouts ===== */
 .card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3-column card grid */
   justify-content: center;
   margin: 0 auto;
   width: fit-content;
   gap: 80px;
 }
 
+/* Contact Card List*/
 .card-list-contact {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-columns: 1fr 1fr 3fr; /* Longer 3rd column for spotify embed widget */
   gap: 80px;
-  margin: 0 auto;
+  margin-top: 8px;
 }
 
-/* Card styling pattern adapted from W3Schools
-   https://www.w3schools.com/howto/howto_css_cards.asp */
+/* Card styling (adapted from W3Schools) */
 .card {
   background-color: white;
   box-shadow : 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -168,12 +176,10 @@ ul.navbar li a:hover {
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 150px;
+  height: 100px;
   margin-top: 12px;
 }
-/* Collapsible section styling pattern adapted from Jordan Finners
-https://medium.com/@jordanfinners/creating-a-collapsible-section-with-nothing-but-html-199f04f13377 */
-
+/* ===== Collapsible Sections (adapted from Jordan Finners) ===== */
 details {
   user-select: none;
 }
@@ -195,10 +201,6 @@ summary {
   font-style: italic;
 }
 
-details[open] .summary {
-  width: 100%; 
-}
-
 .summary:hover{
   background-color: #C09BD8;
   cursor: pointer;
@@ -206,10 +208,11 @@ details[open] .summary {
 
 details[open] .experience-open {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr; /* Text | Image */
   column-gap: 60px;
 }
 
+/* Centers the logo vertically and hortizonally */
 details[open] .experience-open > :nth-child(3) {
   justify-self: center;
   text-align: center;
@@ -233,10 +236,11 @@ details[open] .experience-open > :nth-child(3) {
 }
 
 .experience-open {
-  display: none;
+  display: none; /* Hidden until <details> is opened */
 }
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+.site-footer iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
 }
